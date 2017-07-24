@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Graphical Resistance Calculator</title>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="css/4band.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<style>
+#resistor {text-align:center}
+</style>
+
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<script src="js/4band.js"></script>
+
+</head>
+
+<body>
+
+<!-- header -->
+<script language="JavaScript">
+window.onload = function () {
+}
+</script>
+<script>
+$(document).ready(function() {
+$('input.row1').on('change', function() {
+    $('input.row1').not(this).prop('checked', false);  
+});
+});
+$(document).ready(function() {
+$('input.row2').on('change', function() {
+    $('input.row2').not(this).prop('checked', false);  
+});
+});
+$(document).ready(function() {
+$('input.row3').on('change', function() {
+    $('input.row3').not(this).prop('checked', false);  
+});
+});
+$(document).ready(function() {
+$('input.row4').on('change', function() {
+    $('input.row4').not(this).prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_black_thumb').val($(this).not(':checked'));
+$('#r1_black_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_black1').removeClass('light_on_black1');
+	   }
+        $('#r1_black_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row1').on('change', function() {
+    $('.light_off_black1').removeClass('light_on_black1').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_black_thumb').val($(this).is(':checked'));
+$('#r1_black_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_black1').addClass('light_on_black1');
+	   }
+        $('#r1_black_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_black_thumb').val($(this).not(':checked'));
+$('#r2_black_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_black2').removeClass('light_on_black2');
+	   }
+        $('#r2_black_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row2').on('change', function() {
+    $('.light_off_black2').removeClass('light_on_black2').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_black_thumb').val($(this).is(':checked'));
+$('#r2_black_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_black2').addClass('light_on_black2');
+	   }
+        $('#r2_black_thumb').val($(this).is(':checked'));        
+});
+});
+
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_black_thumb').val($(this).not(':checked'));
+$('#r3_black_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_black3').removeClass('light_on_black3');
+	   }
+        $('#r3_black_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row3').on('change', function() {
+    $('.light_off_black3').removeClass('light_on_black3').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_black_thumb').val($(this).is(':checked'));
+$('#r3_black_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_black3').addClass('light_on_black3');
+	   }
+        $('#r3_black_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_brown_thumb').val($(this).not(':checked'));
+$('#r1_brown_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_brown1').removeClass('light_on_brown1');
+	   }
+        $('#r1_brown_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row1').on('change', function() {
+    $('.light_off_brown1').removeClass('light_on_brown1').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_brown_thumb').val($(this).is(':checked'));
+$('#r1_brown_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_brown1').addClass('light_on_brown1');
+	   }
+        $('#r1_brown_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_brown_thumb').val($(this).not(':checked'));
+$('#r2_brown_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_brown2').removeClass('light_on_brown2');
+	   }
+        $('#r2_brown_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row2').on('change', function() {
+    $('.light_off_brown2').removeClass('light_on_brown2').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_brown_thumb').val($(this).is(':checked'));
+$('#r2_brown_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_brown2').addClass('light_on_brown2');
+	   }
+        $('#r2_brown_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_brown_thumb').val($(this).not(':checked'));
+$('#r3_brown_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_brown3').removeClass('light_on_brown3');
+	   }
+        $('#r3_brown_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row3').on('change', function() {
+    $('.light_off_brown3').removeClass('light_on_brown3').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_brown_thumb').val($(this).is(':checked'));
+$('#r3_brown_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_brown3').addClass('light_on_brown3');
+	   }
+        $('#r3_brown_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_red_thumb').val($(this).not(':checked'));
+$('#r1_red_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_red1').removeClass('light_on_red1');
+	   }
+        $('#r1_red_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row1').on('change', function() {
+    $('.light_off_red1').removeClass('light_on_red1').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_red_thumb').val($(this).is(':checked'));
+$('#r1_red_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_red1').addClass('light_on_red1');
+	   }
+        $('#r1_red_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_red_thumb').val($(this).not(':checked'));
+$('#r2_red_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_red2').removeClass('light_on_red2');
+	   }
+        $('#r2_red_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row2').on('change', function() {
+    $('.light_off_red2').removeClass('light_on_red2').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_red_thumb').val($(this).is(':checked'));
+$('#r2_red_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_red2').addClass('light_on_red2');
+	   }
+        $('#r2_red_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_red_thumb').val($(this).not(':checked'));
+$('#r3_red_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_red3').removeClass('light_on_red3');
+	   }
+        $('#r3_red_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row3').on('change', function() {
+    $('.light_off_red3').removeClass('light_on_red3').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_red_thumb').val($(this).is(':checked'));
+$('#r3_red_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_red3').addClass('light_on_red3');
+	   }
+        $('#r3_red_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_orange_thumb').val($(this).not(':checked'));
+$('#r1_orange_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_orange1').removeClass('light_on_orange1');
+	   }
+        $('#r1_orange_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row1').on('change', function() {
+    $('.light_off_orange1').removeClass('light_on_orange1').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_orange_thumb').val($(this).is(':checked'));
+$('#r1_orange_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_orange1').addClass('light_on_orange1');
+	   }
+        $('#r1_orange_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_orange_thumb').val($(this).not(':checked'));
+$('#r2_orange_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_orange2').removeClass('light_on_orange2');
+	   }
+        $('#r2_orange_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row2').on('change', function() {
+    $('.light_off_orange2').removeClass('light_on_orange2').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_orange_thumb').val($(this).is(':checked'));
+$('#r2_orange_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_orange2').addClass('light_on_orange2');
+	   }
+        $('#r2_orange_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_orange_thumb').val($(this).not(':checked'));
+$('#r3_orange_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_orange3').removeClass('light_on_orange3');
+	   }
+        $('#r3_orange_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row3').on('change', function() {
+    $('.light_off_orange3').removeClass('light_on_orange3').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_orange_thumb').val($(this).is(':checked'));
+$('#r3_orange_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_orange3').addClass('light_on_orange3');
+	   }
+        $('#r3_orange_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_yellow_thumb').val($(this).not(':checked'));
+$('#r1_yellow_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_yellow1').removeClass('light_on_yellow1');
+	   }
+        $('#r1_yellow_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row1').on('change', function() {
+    $('.light_off_yellow1').removeClass('light_on_yellow1').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_yellow_thumb').val($(this).is(':checked'));
+$('#r1_yellow_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_yellow1').addClass('light_on_yellow1');
+	   }
+        $('#r1_yellow_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_yellow_thumb').val($(this).not(':checked'));
+$('#r2_yellow_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_yellow2').removeClass('light_on_yellow2');
+	   }
+        $('#r2_yellow_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row2').on('change', function() {
+    $('.light_off_yellow2').removeClass('light_on_yellow2').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_yellow_thumb').val($(this).is(':checked'));
+$('#r2_yellow_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_yellow2').addClass('light_on_yellow2');
+	   }
+        $('#r2_yellow_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_yellow_thumb').val($(this).not(':checked'));
+$('#r3_yellow_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_yellow3').removeClass('light_on_yellow3');
+	   }
+        $('#r3_yellow_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row3').on('change', function() {
+    $('.light_off_yellow3').removeClass('light_on_yellow3').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_yellow_thumb').val($(this).is(':checked'));
+$('#r3_yellow_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_yellow3').addClass('light_on_yellow3');
+	   }
+        $('#r3_yellow_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_green_thumb').val($(this).not(':checked'));
+$('#r1_green_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_green1').removeClass('light_on_green1');
+	   }
+        $('#r1_green_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row1').on('change', function() {
+    $('.light_off_green1').removeClass('light_on_green1').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_green_thumb').val($(this).is(':checked'));
+$('#r1_green_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_green1').addClass('light_on_green1');
+	   }
+        $('#r1_green_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_green_thumb').val($(this).not(':checked'));
+$('#r2_green_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_green2').removeClass('light_on_green2');
+	   }
+        $('#r2_green_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row2').on('change', function() {
+    $('.light_off_green2').removeClass('light_on_green2').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_green_thumb').val($(this).is(':checked'));
+$('#r2_green_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_green2').addClass('light_on_green2');
+	   }
+        $('#r2_green_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_green_thumb').val($(this).not(':checked'));
+$('#r3_green_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_green3').removeClass('light_on_green3');
+	   }
+        $('#r3_green_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row3').on('change', function() {
+    $('.light_off_green3').removeClass('light_on_green3').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_green_thumb').val($(this).is(':checked'));
+$('#r3_green_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_green3').addClass('light_on_green3');
+	   }
+        $('#r3_green_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_blue_thumb').val($(this).not(':checked'));
+$('#r1_blue_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_blue1').removeClass('light_on_blue1');
+	   }
+        $('#r1_blue_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row1').on('change', function() {
+    $('.light_off_blue1').removeClass('light_on_blue1').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_blue_thumb').val($(this).is(':checked'));
+$('#r1_blue_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_blue1').addClass('light_on_blue1');
+	   }
+        $('#r1_blue_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_blue_thumb').val($(this).not(':checked'));
+$('#r2_blue_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_blue2').removeClass('light_on_blue2');
+	   }
+        $('#r2_blue_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row2').on('change', function() {
+    $('.light_off_blue2').removeClass('light_on_blue2').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_blue_thumb').val($(this).is(':checked'));
+$('#r2_blue_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_blue2').addClass('light_on_blue2');
+	   }
+        $('#r2_blue_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_blue_thumb').val($(this).not(':checked'));
+$('#r3_blue_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_blue3').removeClass('light_on_blue3');
+	   }
+        $('#r3_blue_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row3').on('change', function() {
+    $('.light_off_blue3').removeClass('light_on_blue3').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_blue_thumb').val($(this).is(':checked'));
+$('#r3_blue_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_blue3').addClass('light_on_blue3');
+	   }
+        $('#r3_blue_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_violet_thumb').val($(this).not(':checked'));
+$('#r1_violet_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_violate1').removeClass('light_on_violate1');
+	   }
+        $('#r1_violet_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row1').on('change', function() {
+    $('.light_off_violate1').removeClass('light_on_violate1').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_violet_thumb').val($(this).is(':checked'));
+$('#r1_violet_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_violate1').addClass('light_on_violate1');
+	   }
+        $('#r1_violet_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_violet_thumb').val($(this).not(':checked'));
+$('#r2_violet_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_violate2').removeClass('light_on_violate2');
+	   }
+        $('#r2_violet_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row2').on('change', function() {
+    $('.light_off_violate2').removeClass('light_on_violate2').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_violet_thumb').val($(this).is(':checked'));
+$('#r2_violet_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_violate2').addClass('light_on_violate2');
+	   }
+        $('#r2_violet_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_violet_thumb').val($(this).not(':checked'));
+$('#r3_violet_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_violate3').removeClass('light_on_violate3');
+	   }
+        $('#r3_violet_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row3').on('change', function() {
+    $('.light_off_violate3').removeClass('light_on_violate3').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_violet_thumb').val($(this).is(':checked'));
+$('#r3_violet_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_violate3').addClass('light_on_violate3');
+	   }
+        $('#r3_violet_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_grey_thumb').val($(this).not(':checked'));
+$('#r1_grey_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_grey1').removeClass('light_on_grey1');
+	   }
+        $('#r1_grey_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row1').on('change', function() {
+    $('.light_off_grey1').removeClass('light_on_grey1').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_grey_thumb').val($(this).is(':checked'));
+$('#r1_grey_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_grey1').addClass('light_on_grey1');
+	   }
+        $('#r1_grey_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_grey_thumb').val($(this).not(':checked'));
+$('#r2_grey_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_grey2').removeClass('light_on_grey2');
+	   }
+        $('#r2_grey_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row2').on('change', function() {
+    $('.light_off_grey2').removeClass('light_on_grey2').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_grey_thumb').val($(this).is(':checked'));
+$('#r2_grey_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_grey2').addClass('light_on_grey2');
+	   }
+        $('#r2_grey_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_grey_thumb').val($(this).not(':checked'));
+$('#r3_grey_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_grey3').removeClass('light_on_grey3');
+	   }
+        $('#r3_grey_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row3').on('change', function() {
+    $('.light_off_grey3').removeClass('light_on_grey3').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_grey_thumb').val($(this).is(':checked'));
+$('#r3_grey_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_grey3').addClass('light_on_grey3');
+	   }
+        $('#r3_grey_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_white_thumb').val($(this).not(':checked'));
+$('#r1_white_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_white1').removeClass('light_on_white1');
+	   }
+        $('#r1_white_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row1').on('change', function() {
+    $('.light_off_white1').removeClass('light_on_white1').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r1_white_thumb').val($(this).is(':checked'));
+$('#r1_white_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_white1').addClass('light_on_white1');
+	   }
+        $('#r1_white_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_white_thumb').val($(this).not(':checked'));
+$('#r2_white_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_white2').removeClass('light_on_white2');
+	   }
+        $('#r2_white_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row2').on('change', function() {
+    $('.light_off_white2').removeClass('light_on_white2').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r2_white_thumb').val($(this).is(':checked'));
+$('#r2_white_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_white2').addClass('light_on_white2');
+	   }
+        $('#r2_white_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_silver_thumb').val($(this).not(':checked'));
+$('#r3_silver_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_silver3').removeClass('light_on_silver3');
+	   }
+        $('#r3_silver_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row3').on('change', function() {
+    $('.light_off_silver3').removeClass('light_on_silver3').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_silver_thumb').val($(this).is(':checked'));
+$('#r3_silver_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_silver3').addClass('light_on_silver3');
+	   }
+        $('#r3_silver_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_gold_thumb').val($(this).not(':checked'));
+$('#r3_gold_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_gold3').removeClass('light_on_gold3');
+	   }
+        $('#r3_gold_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row3').on('change', function() {
+    $('.light_off_gold3').removeClass('light_on_gold3').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r3_gold_thumb').val($(this).is(':checked'));
+$('#r3_gold_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_gold3').addClass('light_on_gold3');
+	   }
+        $('#r3_gold_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r4_gold_thumb').val($(this).not(':checked'));
+$('#r4_gold_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_gold4').removeClass('light_on_gold4');
+	   }
+        $('#r4_gold_thumb').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row4').on('change', function() {
+    $('.light_off_gold4').removeClass('light_on_gold4').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r4_gold_thumb').val($(this).is(':checked'));
+$('#r4_gold_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_gold4').addClass('light_on_gold4');
+	   }
+        $('#r4_gold_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r4_silver_thumb').val($(this).not(':checked'));
+$('#r4_silver_thumb').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_silver4').removeClass('light_on_silver4');
+	   }
+        $('#silver4').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row4').on('change', function() {
+    $('.light_off_silver4').removeClass('light_on_silver4').prop('checked', false);  
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#r4_silver_thumb').val($(this).is(':checked'));
+$('#r4_silver_thumb').change(function() {
+        if($(this).is(":checked")) {
+    $('.light_off_silver4').addClass('light_on_silver4');
+	   }
+        $('#r4_silver_thumb').val($(this).is(':checked'));        
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+$('#none4').val($(this).not(':checked'));
+$('#none4').change(function() {
+        if($(this).not(":checked")) {
+    $('.light_off_none4').removeClass('light_on_none4');
+	   }
+        $('#none4').val($(this).not(':checked'));        
+});
+});
+$(document).ready(function() {
+$('input.row4').on('change', function() {
+    $('.light_off_none4').removeClass('light_on_none4').prop('checked', false);  
+});
+});
+</script>
+
+<div class="bottom" style="display:block;">
+  <!-- Tool Body (Weblog Contents)-->
+  <div class="toolBody">
+  
+  <!-- Tool Working Area Title -->
+  <h2>4 Band Resistor Calculator</h2>
+
+  <img class="toolMainImage" src="resbody.png"  alt="resistor"/>
+  <div class="resistor_band" id="band1"></div>
+  <div class="resistor_band" id="band2"></div>
+  <div class="resistor_band" id="band3"></div>
+  <div class="resistor_band" id="band4"></div>
+  <!-- Tool Inputs -->
+  <div class="inputRow clearfix">
+  </div><!-- // Tool Body -->
+<div class="controls">
+<div class="power">
+<p> <i><a href=""></a></i></p> 
+      <div class="inputRow clearfix">
+        <div class="outputLabels"><p>Resistance:&nbsp;</p></div>
+        <div class="outputVals" id="outputVal_1" style="margin-left: -88px; color:white;"></div>&nbsp;
+				</div>
+				<div class="inputRow clearfix">
+        <div class="outputLabels"><p>Tolerance:&nbsp;</p></div>
+        <div class="outputVals" id="outputVal_2" style="margin-left: -88px; color:white;"></div>
+				</div>
+
+ 
+<div class="box" style="display:none;"> </div>
+</div>
+<div class="btns">
+<div class="band1">
+<form name="">
+<span class="toggle">
+	<div class="light_off_black1"></div>
+    <input type="checkbox" id="r1_black_thumb" class="row1" name="tensSelect" value="Black" text="Black">
+    <label data-off="Off" data-on="On"></label>
+</span>
+<span class="toggle">
+	<div class="light_off_brown1"></div>
+    <input type="checkbox" id="r1_brown_thumb" class="row1" name="tensSelect">
+    <label data-off="Off" data-on="On"></label>
+</span>
+
+<span class="toggle">
+	<div class="light_off_red1"></div>
+    <input type="checkbox" id="r1_red_thumb" class="row1" name="tensSelect" value="Red" >
+    <label data-off="Off" data-on="On"></label>
+</span>
+
+<span class="toggle">
+	<div class="light_off_orange1"></div>
+    <input type="checkbox" id="r1_orange_thumb" class="row1" name="tensSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="orange"></option>
+    </span>
+
+<span class="toggle">
+	<div class="light_off_yellow1"></div>
+    <input type="checkbox" id="r1_yellow_thumb" class="row1" name="tensSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="yellow"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_green1"></div>
+    <input type="checkbox" id="r1_green_thumb" class="row1" name="tensSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="green"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_blue1"></div>
+    <input type="checkbox" id="r1_blue_thumb" class="row1" name="tensSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="blue"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_violate1"></div>
+    <input type="checkbox" id="r1_violet_thumb" class="row1" name="tensSelect"  value="violate">
+    <label data-off="Off" data-on="On"></label>
+</span>
+
+<span class="toggle">
+	<div class="light_off_grey1"></div>
+    <input type="checkbox" id="r1_grey_thumb" class="row1" name="tensSelect"  value="grey">
+    <label data-off="Off" data-on="On"></label>
+</span>
+<span class="toggle">
+	<div class="light_off_white1"></div>
+    <input type="checkbox" id="r1_white_thumb" class="row1" name="tensSelect"  value="white">
+    <label data-off="Off" data-on="On"></label>
+</span>
+</form>
+</div>
+<div class="band2">
+<form name="">
+<span class="toggle">
+	<div class="light_off_black2"></div>
+    <input type="checkbox" id="r2_black_thumb" class="row2" name="onesSelect">
+    <label data-off="Off" data-on="On"></label>
+    <option value="black"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_brown2"></div>
+    <input type="checkbox" id="r2_brown_thumb" class="row2" name="onesSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="brown"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_red2"></div>
+    <input type="checkbox" id="r2_red_thumb" class="row2" name="onesSelect" >
+    <label data-off="Off" data-on="On"></label>
+</span>
+
+<span class="toggle">
+	<div class="light_off_orange2"></div>
+    <input type="checkbox" id="r2_orange_thumb" class="row2" name="onesSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="orange"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_yellow2"></div>
+    <input type="checkbox" id="r2_yellow_thumb" class="row2" name="onesSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="yellow"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_green2"></div>
+    <input type="checkbox" id="r2_green_thumb" class="row2" name="onesSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="green"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_blue2"></div>
+    <input type="checkbox" id="r2_blue_thumb" class="row2" name="onesSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="green"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_violate2"></div>
+    <input type="checkbox" id="r2_violet_thumb" class="row2" name="onesSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="violate"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_grey2"></div>
+    <input type="checkbox" id="r2_grey_thumb" class="row2" name="onesSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="grey"></option>
+</span>
+<span class="toggle">
+	<div class="light_off_white2"></div>
+    <input type="checkbox" id="r2_white_thumb" class="row2" name="onesSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="white"></option>
+</span>
+</form>
+</div>
+
+<div class="band3">
+<form name="">
+<span class="toggle">
+	<div class="light_off_black3"></div>
+    <input type="checkbox" id="r3_black_thumb" class="row3" name="multiplierSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="black"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_brown3"></div>
+    <input type="checkbox" id="r3_brown_thumb" class="row3" name="multiplierSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="brown"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_red3"></div>
+    <input type="checkbox" id="r3_red_thumb" class="row3" name="multiplierSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="red"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_orange3"></div>
+    <input type="checkbox" id="r3_orange_thumb" class="row3" name="multiplierSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="orange"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_yellow3"></div>
+    <input type="checkbox" id="r3_yellow_thumb" class="row3" name="multiplierSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="yellow"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_green3"></div>
+    <input type="checkbox" id="r3_green_thumb" class="row3" name="multiplierSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="green"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_blue3"></div>
+    <input type="checkbox" id="r3_blue_thumb" class="row3" name="multiplierSelect">
+    <label data-off="Off" data-on="On"></label>
+    <option value="blue"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_violate3"></div>
+    <input type="checkbox" id="r3_violet_thumb" class="row3" name="multiplierSelect">
+    <label data-off="Off" data-on="On"></label>
+    <option value="violate"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_gold3"></div>
+    <input type="checkbox" id="r3_gold_thumb" class="row3" name="multiplierSelect">
+    <label data-off="Off" data-on="On"></label>
+    <option value="gold"></option>
+</span>
+<span class="toggle">
+	<div class="light_off_silver3"></div>
+    <input type="checkbox" id="r3_silver_thumb" class="row3" name="multiplierSelect">
+    <label data-off="Off" data-on="On"></label>
+    <option value="silver"></option>
+</span>
+</form>
+</div>
+<div class="band4">
+<from name="">
+<span class="toggle">
+	<div class="light_off_gold4"></div>
+    <input type="checkbox" id="r4_gold_thumb" class="row4" name="toleranceSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="gold"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_silver4"></div>
+    <input type="checkbox" id="r4_silver_thumb" class="row4" name="toleranceSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="silver"></option>
+</span>
+
+<span class="toggle">
+	<div class="light_off_none4"></div>
+    <input type="checkbox" id="none4" class="row4" name="toleranceSelect" >
+    <label data-off="Off" data-on="On"></label>
+    <option value="r3_none_thumb"></option>
+</span>
+</form>
+</div>
+</div>
+</form>
+</div>
+</div>
+  
+</div>
+</body>
+</html>

@@ -1,0 +1,345 @@
+#bodyStyle{ background:#fff url(../core/img/background.gif) top left repeat-x; }
+#template{ width:650px;margin:0 auto;margin-top:20px; }
+
+.toolWrap{
+ border:1px solid #ccc;
+ position:relative;
+ text-align:right;
+ margin:0 auto;
+ background-color:#f2f2f2;
+ width:600px;
+-moz-border-radius:5px; -webkit-border-radius:5px;
+ }
+ .toolLogo{
+  font-size:15px;
+  float:left;
+  padding:5px;
+  padding-left:10px;
+  color:#666;
+ }
+ .toolTitle{
+  font-size:15px;
+  color:#666;
+  padding:5px;
+  padding-right:15px;
+  float:right;
+ }
+ 
+ .toolHeader{
+  background:#e6e6e6;
+  border-bottom:1px solid #ccc;
+ }
+ .toolSideBar{
+  background:#e6e6e6;
+  border-bottom:1px solid #ccc;
+  width:130px;
+ 
+  float:left;
+  border-right:1px solid #ccc;
+ }
+ .toolSideBarOptions{
+  background-color:#fff;
+  border:1px solid #ccc;
+ 
+  margin:5px;
+ }
+ .toolSideBarCell{
+  border-bottom:1px solid #ccc;
+  padding-top:10px;
+  padding-bottom:3px;
+  text-align:center;
+ }
+ .sideBarHeader{
+  background-color:#ccc;
+  text-align:center;
+  font-size:14px;
+  padding:3px;
+  margin:5px;
+  margin-bottom:0px;
+  color:#666;
+ }
+
+ .imgBox{
+  width: 68px;
+  height: 26px;
+  margin:0 auto;
+ }
+ .toolSideBarOptions h3 {
+  font-size:11px; 
+  text-align:center;
+  margin-left:5px;
+  margin-right:5px;
+  line-height:14px;
+  padding-top:2px;
+ }
+ .toolCellHot{
+  background-color:#ffeeaa; 
+ }
+ .toolSideBarOptions a{
+  text-decoration:none; 
+  color:#000;
+  display:block;
+ }
+
+ .toolFooter{
+  background-color:#ccc; 
+  clear:left;
+  font-size:1px;
+  height:8px;
+ }
+ .toolBody{
+ 
+    float:left;
+    width: 754px;
+	text-align:center;
+ }
+ .toolBody h2{
+  margin-top:20px; 
+  margin-bottom:10px;
+  color:#666;
+ }
+ .toolTopTitle{
+  /*margin-bottom:20px; */
+ }
+ .toolSubTitle{
+  font-weight:normal;
+  font-size:16px;
+  margin-bottom:30px;
+ }
+ .toolMainImage{
+  margin-bottom:10px; 
+ }
+ 
+
+ 
+  #band1{
+ 	top: 64px;
+	left:290px;
+	width:20px;
+	height:66px;
+ }
+ 
+  #band2{
+ 	top: 64px;
+	left:357px;
+	width:20px;
+	height:66px;
+ }
+  #band3{
+ 	top: 64px;
+	left:425px;
+	width:20px;
+	height:66px;
+ }
+ 
+
+#band4{
+    top: 58px;
+    left: 482px;
+	width:20px;
+	height:78px;
+ }
+
+  .resistor_band{
+	position:absolute;
+  z-index:2;
+  height:20px;
+  width:20px;
+  background-color:red;
+	border-style:solid;
+	border-width:1px;
+	border-color:black;
+ }
+ 
+  .toolImageThumb{
+    margin-left:10px;
+    margin-right:23px;
+  }
+	
+	.color_thumb_black{
+    width:50px;
+    height:20px;
+		background-color:black;
+		margin-left:5px;
+		color: white;
+		text-align:center;
+		line-height:200%;
+		border-style:solid;
+		border-width:1px;
+		border-color:black;
+  }
+	
+	.color_thumb_brown{
+    width:50px;
+    height:20px;
+		background-color:#a05a2c;
+		margin-left:5px;
+		color: white;
+		text-align:center;
+		line-height:200%;
+		border-style:solid;
+		border-width:1px;
+		border-color:black;
+  }
+	.color_thumb_red{
+    width:50px;
+    height:20px;
+		background-color:#da0000;
+		margin-left:5px;
+		color: white;
+		text-align:center;
+		line-height:200%;
+		border-style:solid;
+		border-width:1px;
+		border-color:black;
+  } 
+	.color_thumb_orange{
+    width:50px;
+    height:20px;
+		background-color:#ff6600;
+		margin-left:5px;
+		color: white;
+		text-align:center;
+		line-height:200%;
+		border-style:solid;
+		border-width:1px;
+		border-color:black;
+  } 
+	.color_thumb_yellow{
+    width:50px;
+    height:20px;
+		background-color:#ffcc00;
+		margin-left:5px;
+		color: black;
+		text-align:center;
+		line-height:200%;
+		border-style:solid;
+		border-width:1px;
+		border-color:black;
+  } 
+	.color_thumb_green{
+    width:50px;
+    height:20px;
+		background-color:#008000;
+		margin-left:5px;
+		color: white;
+		text-align:center;
+		line-height:200%;
+		border-style:solid;
+		border-width:1px;
+		border-color:black;
+  } 
+	.color_thumb_blue{
+    width:50px;
+    height:20px;
+		background-color:#000080;
+		margin-left:5px;
+		color: white;
+		text-align:center;
+		line-height:200%;
+		border-style:solid;
+		border-width:1px;
+		border-color:black;
+  }
+	.color_thumb_violet{
+    width:50px;
+    height:20px;
+		background-color:#800080;
+		margin-left:5px;
+		color: white;
+		text-align:center;
+		line-height:200%;
+		border-style:solid;
+		border-width:1px;
+		border-color:black;
+  }
+	.color_thumb_grey{
+    width:50px;
+    height:20px;
+		background-color:#666666;
+		margin-left:5px;
+		color: white;
+		text-align:center;
+		line-height:200%;
+		border-style:solid;
+		border-width:1px;
+		border-color:black;
+  }
+	.color_thumb_white{
+    width:50px;
+    height:20px;
+		background-color:#ffffff;
+		margin-left:5px;
+		color: black;
+		text-align:center;
+		line-height:200%;
+		border-style:solid;
+		border-width:1px;
+		border-color:black;
+  }
+	.color_thumb_gold{
+    width:50px;
+    height:20px;
+		background-color:#d4a017;
+		margin-left:5px;
+		color: black;
+		text-align:center;
+		line-height:200%;
+		border-style:solid;
+		border-width:1px;
+		border-color:black;
+  }
+	.color_thumb_silver{
+    width:50px;
+    height:20px;
+		background-color:#b3b3b3;
+		margin-left:5px;
+		color: black;
+		text-align:center;
+		line-height:200%;
+		border-style:solid;
+		border-width:1px;
+		border-color:black;
+  }
+	
+	.color_thumb_blank{
+    width:50px;
+    height:20px;
+		background-color:#f2f2f2;
+		margin-left:5px;
+		color: black;
+		text-align:center;
+		line-height:200%;
+		border-style:solid;
+		border-width:1px;
+		border-color:#f2f2f2;
+  }
+	.thumb_label{
+    width:55px;
+    height:20px;
+		margin-left:2px;
+		color: black;
+		text-align:center;
+		font-weight:bold;
+		line-height:200%;
+		font-size:85%;
+  }
+	
+ .toolSideBarCell{cursor:pointer;}
+
+
+/* input fields */
+.inputHL{background-color:#e6e6e6;text-align:left;margin:20px;margin-top:0px;margin-bottom:15px;padding-left:20px;color:#666;font-size:15px; margin-left: 329px;}
+.inputRow div{}
+.inputRow {text-align:left;}
+.fieldName{font-size:100%;font-weight:bold;width:50px;line-height:23px;text-align:left;margin-left:32px;white-space:nowrap;}
+.fieldName1{width:38px;line-height:23px;text-align:left;margin-left:20px;white-space:nowrap;}
+.fieldAbbrv{width:53px;line-height:23px;}
+.fieldInput input{width:100px;font-size:14px;padding:3px;padding-left:5px;border:1px solid #ccc;margin-right:10px;}
+.fieldSelect select{width:69px;font-size:14px;border:1px solid #ccc;height:25px;margin-left:2px;}
+.inputRow{position:relative;}
+.outputVals,.outputLabels{}
+.outputLabels{    margin-left: -672px;}
+.outputVals{text-align:left;font-style:italic;}
+
+
